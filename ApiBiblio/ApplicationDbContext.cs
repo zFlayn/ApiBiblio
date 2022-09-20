@@ -11,5 +11,7 @@ namespace ApiBiblio
         }
 
         public DbSet<Libro> Libros { get; set; }
+
+        public DbSet<Autor> Autores { get; set; }
     }
 }

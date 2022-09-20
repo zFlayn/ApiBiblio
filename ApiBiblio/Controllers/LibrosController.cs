@@ -42,5 +42,14 @@ namespace ApiBiblio.Controllers
             await dbContext.SaveChangesAsync();
             return Ok();
         }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var libDelete = await dbContext.Libros.FindAsync(id);
+            dbContext.Libros.Remove(libDelete);
+            await dbContext.SaveChangesAsync();
+            return Ok();
+        }
     }
 }
