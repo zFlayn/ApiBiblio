@@ -7,8 +7,9 @@ namespace ApiBiblio.Entidades
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; } 
-        
+        public string Name { get; set; }
+        [Required(ErrorMessage = "Se requiere llenar este campo")]
+
         public virtual List<Autor> Datos { get; set; }
 
     }
@@ -19,8 +20,10 @@ namespace ApiBiblio.Entidades
         public int Id { get; set; } 
 
         public string Editorial { get; set; }
+        [Required (ErrorMessage = "Se requiere llenar este campo")]
 
         public string Autorn { get; set; }
+        [Required(ErrorMessage = "Se requiere llenar este campo")]
 
         public int Aid { get; set; }
     }

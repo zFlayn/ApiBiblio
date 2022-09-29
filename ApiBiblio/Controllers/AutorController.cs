@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ApiBiblio.Controllers
 {
     [ApiController]
-    [Route("autor")]
+    [Route("api/autor")]
     public class AutorController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
