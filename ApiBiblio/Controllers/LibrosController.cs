@@ -32,8 +32,8 @@ namespace ApiBiblio.Controllers
             return await dbContext.Libros.Include(x => x.Datos).ToListAsync();
         }
 
-        [HttpGet("{id:int}/{param=prueba}")]
-        public async Task<ActionResult<Libro>> Get(int id, string param)
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Libro>> Get(int id)
         {
             var libro = await dbContext.Libros.FirstOrDefaultAsync(x => x.Id == id);  
             if(libro == null)
